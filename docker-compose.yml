@@ -1,0 +1,12 @@
+services:
+  app1:
+    build:
+      context: ./app1
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
+    networks:
+      - log4j-vulnerable-app
+
+networks:
+  log4j-vulnerable-app:
